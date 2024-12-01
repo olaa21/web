@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="/index.html">Home</a>
+                <a href="interests.html">Interests</a>
+                <a href="work.html">Work</a>
+                <a href="data_insights.html">Data Insights</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-right">
+                <p class="name">oyinkan ifidon-ola</p>
+                <p class="pronunciation">o-yi(n)-co(n) ifidon-ola</p>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>My Work</h1>
+        <p>Creative Technology and Product Design.</p>
+        
+        <div class="gallery">
+            
+            <figure data-category="a limited dexterity knife.">
+                <img 
+                    src="images/work_001.jpg" 
+                    alt="Limited dexterity knife." 
+                    onclick="openLightbox('images/work_001.jpg', 'Limited dexterity knife.', 'A knife design for people wiht arthritis and general imited dexterity. It provides balance and the flat blade allows the user to hav independence in the kitchen without needing much force or movement.')"
+                
+>            </figure>
+            
+            <figure data-category="a image of an exhibition.">
+                <img 
+                    src="images/work_002.jpg" 
+                    alt="Colour and Culture Sonification." 
+                    onclick="openLightbox('images/work_002.jpg', 'Colour and Culture Sonification.', 'An exhibiton layout that immerses the audience in the cultural relevances of colour and sound and how it shapes our perceptions.')"
+                
+>            </figure>
+            
+            <figure data-category="a toy design.">
+                <img 
+                    src="images/work_003.jpg" 
+                    alt="Texture Teddy." 
+                    onclick="openLightbox('images/work_003.jpg', 'Texture Teddy.', 'Texture teddy is a toy for children on the spectrum. Designed with different detachable coloured and textured parts, through physical touch it helps teach kids to understand and express different emotions.')"
+                
+>            </figure>
+            
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox-outer-container" onclick="closeLightbox()">
+            <div class="lightbox-inner-container" onclick="event.stopPropagation()">
+              <button class="lightbox-prev" onclick="navigateLightbox(-1)">&#10094;</button>
+              <img id="lightbox-image" alt="Lightbox Image">
+              <div id="lightbox-caption"></div>
+              <!-- <button class="lightbox-next" onclick="navigateLightbox(1)">&#10095;</button> -->
+              <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script src="js/lightbox.js"></script>
+    <script src="js/gallery.js"></script>
+
+</body>
+</html>
