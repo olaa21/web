@@ -25,3 +25,9 @@
 .gallery figure {
     display: none; /* All figures hidden by default */
 }
+
+@media (prefers-color-scheme: dark) {
+    .filter-button:hover {
+        background-color: #e52929;
+    }
+}

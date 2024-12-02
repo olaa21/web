@@ -65,6 +65,35 @@ nav {
     cursor: pointer;
 }
 
+.menu-toggle {
+    display: block;
+    background: none;
+    border: 1px solid #888; /* Neutral border color visible on both modes */
+    color: #000; /* Default text color for light mode */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px; /* Optional: adds some style */
+    background-color: #f0f0f0; /* Light background for better contrast */
+  }
+  
+  .menu-toggle:hover {
+    background-color: #ddd; /* Slightly darker hover effect */
+  }
+  
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    .menu-toggle {
+      color: #fff; /* Text color visible on dark mode */
+      border: 1px solid #ccc; /* Lighter border for dark mode */
+      background-color: #333; /* Darker background for contrast */
+    }
+  
+    .menu-toggle:hover {
+      background-color: #444; /* Slightly darker hover effect for dark mode */
+    }
+  }
+
 /* Show navigation when menu is toggled */
 nav.open .nav-left, nav.open .nav-right {
     display: flex; /* Display links when menu is open */
@@ -168,26 +197,72 @@ main p {
     cursor: pointer;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
+
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+    body {
+        color: #000;
+        background-color: #fff;
+    }
+
+    header, nav {
+        background-color: #fff;
+    }
+
+    .nav-left a {
+        color: #000;
+        border: 1px dotted #000;
+    }
+
+    .nav-left a:hover {
+        color: #555;
     }
 
     main h1 {
-        font-size: 2rem;
+        color: #222;
     }
 
     main p {
-        font-size: 1rem;
-    }
-
-    .gallery {
-        gap: 10px;
-    }
-
-    .gallery figure {
-        width: 120px;
-        height: 120px;
+        color: #555;
     }
 }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #fff;
+        background-color: #000;
+    }
+
+    header, nav {
+        background-color: #1c1c1c;
+        border-bottom: 1px dotted #fff;
+    }
+
+    .nav-left a {
+        color: #fff;
+        border: 1px dotted #fff;
+    }
+
+    .nav-left a:hover {
+        color: #e30000;
+    }
+
+    .nav-right .pronunciation{
+        color: #fff;
+    }
+
+    main h1 {
+        color: #fff;
+    }
+
+    main p {
+        color: #ddd;
+    }
+
+    .gallery figure:hover {
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+    }
+}
+

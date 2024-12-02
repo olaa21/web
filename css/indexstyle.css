@@ -65,6 +65,35 @@ nav {
     cursor: pointer;
 }
 
+.menu-toggle {
+  display: block;
+  background: none;
+  border: 1px solid #888; /* Neutral border color visible on both modes */
+  color: #000; /* Default text color for light mode */
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px; /* Optional: adds some style */
+  background-color: #f0f0f0; /* Light background for better contrast */
+}
+
+.menu-toggle:hover {
+  background-color: #ddd; /* Slightly darker hover effect */
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .menu-toggle {
+    color: #fff; /* Text color visible on dark mode */
+    border: 1px solid #ccc; /* Lighter border for dark mode */
+    background-color: #333; /* Darker background for contrast */
+  }
+
+  .menu-toggle:hover {
+    background-color: #444; /* Slightly darker hover effect for dark mode */
+  }
+}
+
 /* Show navigation when menu is toggled */
 nav.open .nav-left, nav.open .nav-right {
     display: flex; /* Display links when menu is open */
@@ -175,5 +204,39 @@ body {
   }
   
   .footer a:hover {
-    color: #555;
+    color: #e30000;
   }
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+      color: #fff; /* White text */
+      background-color: #000; /* Black background */
+  }
+
+  nav, header {
+      background-color: #1c1c1c; /* Black background for navigation and header */
+  }
+
+  .nav-left a, .section a, .footer a {
+      color: #fff; /* White text for links */
+      border: 1px dotted #fff;
+  }
+
+  .nav-left a:hover, .section a:hover, .footer a:hover {
+      color: #e30000; /* Lighter gray for hover effect */
+  }
+
+  .nav-right .pronunciation{
+    color: #fff;
+  }
+
+  h1 {
+      color: #fff; /* White heading in dark mode */
+  }
+
+  p {
+      color: #fff; /* Light gray for paragraph text */
+  }
+}
+
